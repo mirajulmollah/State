@@ -1,12 +1,16 @@
 import { useEffect, useState } from 'react'
 
 import Button from './Components/Button'
+import ColorBox from './Components/ColorBox'
 
 import './App.css'
 
 function App() {
 
   const colors = ['red', 'green', 'blue', 'gray', 'pink', 'yellow']
+  const [ColorChange,setColorchange]=useState('blue')
+
+ 
 
 
 
@@ -18,7 +22,7 @@ function App() {
         
 
             
-            <Button key={items} color={items}>{items}</Button>
+            <Button key={items} color={items} setColorchange={setColorchange} >{items}</Button>
           
 
         
@@ -26,6 +30,7 @@ function App() {
 
       ))}
       </div>
+      <ColorBox ColorChanges={ColorChange}/>
 
     </div>
 
